@@ -113,3 +113,8 @@ td {
     font-size: 30px;
     text-align: center;
 }
+
+input.checkbox {
+    width: 25px;
+    height: 25px;
+  }
