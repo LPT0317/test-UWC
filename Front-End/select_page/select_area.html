@@ -1,79 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Create New Task</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Custom CSS -->
-  <style>
-    body {
-      background-color: #007777;
-    }
-    .form-block {
-      background-color: #21222D;
-      padding: 20px;
-      border-radius: 5px;
-      margin: 20px auto;
-      max-width: 600px;
-    }
-    .form-label {
-      color: #fff;
-    }
-    .form-control {
-      background-color: #fff;
-      color: #21222D;
-    }
-  </style>
+	<title>Register Form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style>
+		body {
+			background-color: #007777;
+		}
+		.block {
+			background-color: #21222D;
+			padding: 20px;
+			border-radius: 10px;
+			margin-top: 50px;
+			color: white;
+		}
+	</style>
 </head>
 <body>
-  <div class="container">
-    <div class="form-block">
-      <h2 class="text-center text-white mb-4">Create New Task</h2>
-      <form>
-        <div class="form-group">
-          <label for="start-time" class="form-label">Start Time:</label>
-          <input type="time" class="form-control" id="start-time" name="start-time">
-        </div>
-        <div class="form-group">
-          <label for="end-time" class="form-label">End Time:</label>
-          <input type="time" class="form-control" id="end-time" name="end-time">
-        </div>
-        <div class="form-group">
-          <label for="collector" class="form-label">Collector:</label>
-          <select class="form-control" id="collector" name="collector">
-            <option value="John">John</option>
-            <option value="Mary">Mary</option>
-            <option value="Peter">Peter</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="janitor" class="form-label">Janitor:</label>
-          <select class="form-control" id="janitor" name="janitor">
-            <option value="Bill">Bill</option>
-            <option value="Sue">Sue</option>
-            <option value="Tom">Tom</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="area" class="form-label">Area:</label>
-          <select class="form-control" id="area" name="area">
-            <option value="Downtown">Downtown</option>
-            <option value="Uptown">Uptown</option>
-            <option value="East Side">East Side</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="vehicles" class="form-label">Vehicles:</label>
-          <select class="form-control" id="vehicles" name="vehicles">
-            <option value="Truck">Truck</option>
-            <option value="Van">Van</option>
-            <option value="SUV">SUV</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </div>
-  </div>
-  <!-- Bootstrap JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 mx-auto block">
+				<form id="registerForm">
+					<div class="form-group">
+						<label for="startTime">Start Time:</label>
+						<input type="datetime-local" class="form-control" id="startTime" name="startTime">
+					</div>
+					<div class="form-group">
+						<label for="endTime">End Time:</label>
+						<input type="datetime-local" class="form-control" id="endTime" name="endTime">
+					</div>
+					<div class="form-group">
+						<label for="collector">Collector:</label>
+						<input type="text" class="form-control" id="collector" name="collector">
+					</div>
+					<div class="form-group">
+						<label for="janitor">Janitor:</label>
+						<input type="text" class="form-control" id="janitor" name="janitor">
+					</div>
+					<div class="form-group">
+						<label for="area">Area:</label>
+						<select class="form-control" id="area" name="area">
+							<option value="area1">Area 1</option>
+							<option value="area2">Area 2</option>
+							<option value="area3">Area 3</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="vehicles">Vehicles:</label>
+						<input type="text" class="form-control" id="vehicles" name="vehicles">
+					</div>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// JavaScript code for registering form submission
+		const form = document.getElementById('registerForm');
+
+		form.addEventListener('submit', (event) => {
+			event.preventDefault(); // Prevent form from submitting
+
+			const formData = new FormData(form);
+
+			// Log the form data to the console
+			for (let pair of formData.entries()) {
+				console.log(pair[0] + ': ' + pair[1]);
+			}
+		});
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
