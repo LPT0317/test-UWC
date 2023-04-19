@@ -16,7 +16,7 @@
     />
     <link href="css/styles.css" rel="stylesheet" />
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
-    <link rel="stylesheet" href="css/overview-task.css" />
+    <link rel="stylesheet" href="css/add-task.css" />
     <script
       src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
       crossorigin="anonymous"
@@ -28,46 +28,53 @@
     <div id="layoutSidenav">
       <div id="layoutSidenav_content">
         <main>
-          <div class="container-fluid">
-            <!-- Header -->
-            <!-- <div class="header sticky-top">Header here</div> -->
-            <!-- Header end -->
-            <!-- Body -->
-            <div
-              class="wrapper d-flex flex-column justify-content-center mx-auto"
-            >
-              <!-- Add task button and search bar -->
-              <div
-                class="wrapper-top d-flex flex-row align-items-center justify-content-between mt-4 mb-4"
-              >
-                <h1>Danh sách công việc</h1>
-                <div class="d-flex flex-row justify-content-end">
-                  <a href="#" class="add-task-btn mx-3">
-                    <img
-                      src="https://www.svgrepo.com/show/8377/plus.svg"
-                      alt="Add task"
-                    />
-                    <div>Thêm công việc</div>
-                  </a>
-                  <input
-                    type="text"
-                    placeholder="Tìm kiếm công việc"
-                    class="search-task"
-                  />
+          <div class="container">
+            <div class="form-block">
+              <h2 class="text-center text-white mb-4">Create New Task</h2>
+              <form>
+                <div class="form-group">
+                  <label for="start-time" class="form-label">Start Time:</label>
+                  <input type="time" class="form-control" id="start-time" name="start-time">
                 </div>
-              </div>
-              <!-- Add task button and search bar end -->
-              <!-- Overview table -->
-              <table class="task-detail-table"></table>
-              <!-- Overview table end -->
-              <!-- Navigate buttons -->
-              <div class="d-flex justify-content-end mt-4">
-                <a href="#" class="nav-btn prev-btn">&lt;</a>
-                <a href="#" class="nav-btn next-btn">&gt;</a>
-              </div>
-              <!-- Navigate buttons end -->
+                <div class="form-group">
+                  <label for="end-time" class="form-label">End Time:</label>
+                  <input type="time" class="form-control" id="end-time" name="end-time">
+                </div>
+                <div class="form-group">
+                  <label for="collector" class="form-label">Collector:</label>
+                  <select class="form-control" id="collector" name="collector">
+                    <option value="John">John</option>
+                    <option value="Mary">Mary</option>
+                    <option value="Peter">Peter</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="janitor" class="form-label">Janitor:</label>
+                  <select class="form-control" id="janitor" name="janitor">
+                    <option value="Bill">Bill</option>
+                    <option value="Sue">Sue</option>
+                    <option value="Tom">Tom</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="area" class="form-label">Area:</label>
+                  <select class="form-control" id="area" name="area">
+                    <option value="Downtown">Downtown</option>
+                    <option value="Uptown">Uptown</option>
+                    <option value="East Side">East Side</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="vehicles" class="form-label">Vehicles:</label>
+                  <select class="form-control" id="vehicles" name="vehicles">
+                    <option value="Truck">Truck</option>
+                    <option value="Van">Van</option>
+                    <option value="SUV">SUV</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
             </div>
-            <!-- Body end -->
           </div>
         </main>
         <footer class="py-4 bg-light mt-auto">
