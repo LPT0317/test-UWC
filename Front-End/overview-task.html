@@ -46,44 +46,57 @@
                   <input type="time" class="form-control" id="end-time" name="end-time">
                 </div>
                 <div class="form-group">
-                  <label for="collector" class="form-label">Collector:</label>
-                  <select class="form-control" id="collector" name="collector">
-                    <option value="John">John</option>
-                    <option value="Mary">Mary</option>
-                    <option value="Peter">Peter</option>
+                  <label for="area" class="form-label">Area:</label>
+                  <select data-placeholder="Select areas" multiple class="chosen-select form-control" name="area">
+                    <option value=""></option>
+                    <option value="Downtown">Downtown</option>
+                    <option value="Uptown">Uptown</option>
+                    <option value="East Side">East Side</option>
+                  </select>                  
+                </div>
+                <div class="form-group">
+                  <label for="mcp" class="form-label">MCP:</label>
+                  <select data-placeholder="Select MCPs" multiple class="chosen-select form-control" name="mcp">
+                    <option value=""></option>
+                    <option value="MCP001">MCP001</option>
+                    <option value="MCP002">MCP002</option>
+                    <option value="MCP003">MCP003</option>
+                  </select>                  
+                </div>
+                <div class="form-group">
+                  <label for="troller" class="form-label">Troller:</label>
+                  <select data-placeholder="Select trollers" multiple class="chosen-select form-control" name="troller">
+                    <option value=""></option>
+                    <option value="Truck">Truck</option>
+                    <option value="Van">Van</option>
+                    <option value="SUV">SUV</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="janitor" class="form-label">Janitor:</label>
-                  <select class="form-control" id="janitor" name="janitor">
+                  <select data-placeholder="Select janitors" multiple class="chosen-select form-control" name="janitor">
+                    <option value=""></option>
                     <option value="Bill">Bill</option>
                     <option value="Sue">Sue</option>
                     <option value="Tom">Tom</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="area" class="form-label">Area:</label>
-                  <select class="form-control" id="area" name="area">
-                    <option value="Downtown">Downtown</option>
-                    <option value="Uptown">Uptown</option>
-                    <option value="East Side">East Side</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="vehicles" class="form-label">Vehicles:</label>
-                  <select class="form-control" id="vehicles" name="vehicles">
-                    <option value="Truck">Truck</option>
-                    <option value="Van">Van</option>
-                    <option value="SUV">SUV</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="vehicles" class="form-label">Vehicles:</label>
-                  <select data-placeholder="Begin typing a name to filter..." multiple class="chosen-select form-control" name="test">
+                  <label for="truck" class="form-label">Truck:</label>
+                  <select data-placeholder="Select trucks" multiple class="chosen-select form-control" name="truck">
                     <option value=""></option>
                     <option value="Truck">Truck</option>
                     <option value="Van">Van</option>
                     <option value="SUV">SUV</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="collector" class="form-label">Collector:</label>
+                  <select data-placeholder="Select collectors" multiple class="chosen-select form-control" name="collector">
+                    <option value=""></option>
+                    <option value="John">John</option>
+                    <option value="Mary">Mary</option>
+                    <option value="Peter">Peter</option>
                   </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
